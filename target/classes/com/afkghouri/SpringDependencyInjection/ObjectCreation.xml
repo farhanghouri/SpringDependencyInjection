@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="circleobj" class="com.afkghouri.SpringDependencyInjection.Circle"></bean>
+   
+   <bean id="triangleobj" class="com.afkghouri.SpringDependencyInjection.Triangle"></bean>
+   
+   
+   <bean id="shapeserviceobj" class="com.afkghouri.SpringDependencyInjection.ShapeService">
+     <property name="myShape" ref="triangleobj"></property>
+   </bean>
+   
+</beans>
